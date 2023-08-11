@@ -111,12 +111,17 @@ const rectangle = {
     likability: 'medium' ,
     recommendOrNot: true,
     getRectangle: function(){
-        return `${this.color} ${this.length}`
+        // return `${this.color} ${this.length}`
+        return this.color;
     },
     corners: {
         curved: true,
         notCurved: false,
         convex: true
+    },
+    type: {
+        square: true,
+        rectangle: false
     }
 }
 print(rectangle)
@@ -130,7 +135,7 @@ print(rectangle)
 print(rectangle.likability)
 
 // Object manipulation methods
-// assign: to copy an object without modigying the original object
+// assign: to copy an object without modifying the original object
 const copy = Object.assign({}, rectangle)
 print(copy)
 // getting object keys
@@ -148,6 +153,8 @@ print(values)
 print(Object.entries(rectangle))
 // to check if a key or property exists in an object or not
 print(rectangle.hasOwnProperty('color'))
+
+print(copy.corners.curved)
 
 
 
